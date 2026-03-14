@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
 <title>Student Result Calculator</title>
 
 <style>
@@ -17,7 +18,7 @@ align-items:center;
 .container{
 background:white;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 width:350px;
 text-align:center;
 box-shadow:0 10px 20px rgba(0,0,0,0.2);
@@ -63,6 +64,7 @@ font-weight:bold;
 <input type="number" id="subjects" placeholder="Number of Subjects">
 
 <button onclick="enterMarks()">Enter Marks</button>
+
 <button onclick="calculateResult()">Calculate Result</button>
 
 <div id="result"></div>
@@ -72,7 +74,6 @@ font-weight:bold;
 <script>
 
 let marks=[];
-let studentCount=0;
 
 function enterMarks(){
 
@@ -82,19 +83,15 @@ let subjects=document.getElementById("subjects").value;
 
 for(let i=1;i<=subjects;i++){
 
-let m=prompt("Enter marks for subject "+i);
-marks.push(Number(m));
+let mark=prompt("Enter marks for subject "+i);
+
+marks.push(Number(mark));
 
 }
 
 }
 
 function calculateResult(){
-
-if(studentCount>=3){
-alert("You can only enter 3 students");
-return;
-}
 
 let total=0;
 
@@ -104,7 +101,8 @@ total+=m;
 
 let avg=total/marks.length;
 
-let grade;
+let grade="";
+let result="";
 
 if(avg>=90) grade="A";
 else if(avg>=75) grade="B";
@@ -112,7 +110,7 @@ else if(avg>=60) grade="C";
 else if(avg>=40) grade="D";
 else grade="F";
 
-let result = avg>=40 ? "PASS" : "FAIL";
+result = avg>=40 ? "PASS" : "FAIL";
 
 document.getElementById("result").innerHTML=
 
@@ -121,20 +119,10 @@ document.getElementById("result").innerHTML=
 "Grade: "+grade+"<br>"+
 "Result: "+result;
 
-studentCount++;
-
-if(studentCount<3){
-
-alert("Enter next student details");
+alert("Now enter details for next student");
 
 document.getElementById("name").value="";
 document.getElementById("subjects").value="";
-
-}else{
-
-alert("All 3 students data entered");
-
-}
 
 }
 
