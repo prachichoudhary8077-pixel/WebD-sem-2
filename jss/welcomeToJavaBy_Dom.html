@@ -22,7 +22,7 @@
       text-align: center;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
       background-color: white;
     }
 
@@ -44,6 +44,16 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
+  
+   #name {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e91e63;
+  text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50;
+}
+
   </style>
 </head>
 
@@ -63,10 +73,12 @@
     <p id="para">
       “JavaScript is a powerful scripting language that enables dynamic behavior and interactivity on web pages.”
     </p>
+
+    <!-- 👇 Your Name -->
+    <p id="name">✨ Created by: PRACHI CHOUDHARY ✨</p>
   </div>
 
   <script>
-    // DOM select
     let bgBtn = document.getElementById("bgBtn");
     let resetBtn = document.getElementById("resetBtn");
     let incBtn = document.getElementById("incBtn");
@@ -76,13 +88,11 @@
     let heading = document.getElementById("heading");
     let para = document.getElementById("para");
 
-    // Change Background
     bgBtn.addEventListener("click", function() {
       let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
       document.body.style.backgroundColor = randomColor;
     });
 
-    // Reset
     resetBtn.addEventListener("click", function() {
       document.body.style.backgroundColor = "white";
       heading.style.fontSize = "32px";
@@ -90,7 +100,6 @@
       para.style.display = "block";
     });
 
-    // Increase Font
     incBtn.addEventListener("click", function() {
       let hSize = window.getComputedStyle(heading).fontSize;
       let pSize = window.getComputedStyle(para).fontSize;
@@ -99,7 +108,6 @@
       para.style.fontSize = (parseInt(pSize) + 2) + "px";
     });
 
-    // Decrease Font
     decBtn.addEventListener("click", function() {
       let hSize = window.getComputedStyle(heading).fontSize;
       let pSize = window.getComputedStyle(para).fontSize;
@@ -108,7 +116,6 @@
       para.style.fontSize = (parseInt(pSize) - 2) + "px";
     });
 
-    // Show / Hide Paragraph
     toggleBtn.addEventListener("click", function() {
       if (para.style.display === "none") {
         para.style.display = "block";
