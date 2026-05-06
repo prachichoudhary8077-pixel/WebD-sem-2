@@ -23,7 +23,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* 🔥 DARK TITLE */
+
 .card h2 {
   margin-bottom: 20px;
   color: #222;   /* darker text */
@@ -39,7 +39,7 @@ input {
   outline: none;
   background: #f9f9f9;
 
-  color: #000;              /* 🔥 ADD THIS (text visible) */
+  color: #000;             
   font-size: 14px;
 }
 
