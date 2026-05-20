@@ -1,4 +1,5 @@
 import './App.css';
+
 export default function App() {
   const students = [
     {
@@ -20,9 +21,11 @@ export default function App() {
       marks: 78
     }
   ];
+
   return (
     <div className="student-container">
       <h1 className="student-title">Student Information</h1>
+
       <div className="cards-wrapper">
         {students.map((student) => (
           <div key={student.id} className="student-card">
@@ -32,6 +35,9 @@ export default function App() {
           </div>
         ))}
       </div>
+
+      {/* Footer Name */}
+      <h3 className="created-by">By PRACHI CHOUDHARY</h3>
     </div>
   );
 }
