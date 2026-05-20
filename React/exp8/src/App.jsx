@@ -12,18 +12,28 @@ function App() {
     <div className="app-container">
       <div className="counter-card">
         <h1>React Counter Application</h1>
-        <div className="counter-display">{count}</div>
+
+        <div className="counter-display">
+          {count}
+        </div>
+
         <div className="buttons-container">
           <button className="btn btn-primary" onClick={increment}>
             Increment (+)
           </button>
+
           <button className="btn btn-primary" onClick={decrement}>
             Decrement (-)
           </button>
         </div>
+
         <button className="btn btn-reset" onClick={reset}>
           Reset
         </button>
+
+        <h3 className="created-by">
+          By PRACHI CHOUDHARY
+        </h3>
       </div>
     </div>
   );
