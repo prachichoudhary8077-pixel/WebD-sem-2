@@ -1,27 +1,25 @@
 import './App.css';
-
 export default function App() {
   const students = [
     {
       id: 1,
-      name: "Rahul Sharma",
+      name: "Prachi Choudhary",
       course: "Computer Science",
       marks: 85
     },
     {
       id: 2,
-      name: "Anita Verma",
+      name: "Sanjeev Soni",
       course: "Information Technology",
       marks: 92
     },
     {
       id: 3,
-      name: "Rohan Gupta",
+      name: "Shivani Sharma",
       course: "Electronics",
       marks: 78
     }
   ];
-
   return (
     <div className="student-container">
       <h1 className="student-title">Student Information</h1>
