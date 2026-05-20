@@ -4,7 +4,6 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
-
 function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -57,11 +56,16 @@ function App() {
           <button type="submit">Register</button>
         </form>
 
-        {success && <p className="success">Registration Successful!</p>}
+        {success && (
+          <p className="success">
+            Registration Successful!
+          </p>
+        )}
 
         {users.length > 0 && (
           <div className="user-list">
             <h3>Registered Users</h3>
+
             <ul>
               {users.map((user, index) => (
                 <li key={index}>
@@ -71,6 +75,11 @@ function App() {
             </ul>
           </div>
         )}
+
+        {/* Name Footer */}
+        <h3 className="created-by">
+          By PRACHI CHOUDHARY
+        </h3>
       </div>
     </div>
   );
