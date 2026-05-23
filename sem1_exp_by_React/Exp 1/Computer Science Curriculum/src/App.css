@@ -10,7 +10,7 @@ body {
   margin: auto;
   background: white;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 90px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -20,20 +20,47 @@ h1 {
   color: darkblue;
 }
 
-/* Name Box CSS */
+/* Stylish Fixed Name Box */
 .name-box {
-  background-color: #222;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+
+  background: linear-gradient(135deg, #ff512f, #dd2476);
   color: white;
-  text-align: center;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+
+  padding: 14px 28px;
+
+  border-radius: 50px;
+
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.35);
+
+  z-index: 1000;
+
+  animation: float 3s ease-in-out infinite;
 }
 
+/* Name Text */
 .name-box h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
   letter-spacing: 1px;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 h2,
