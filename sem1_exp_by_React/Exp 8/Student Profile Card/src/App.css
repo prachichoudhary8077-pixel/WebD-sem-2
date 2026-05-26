@@ -1,0 +1,302 @@
+/* =========================
+   ROOT COLORS
+========================= */
+:root {
+  --card-bg: #ffffff;
+  --accent: #3b82f6;
+  --muted: #6b7280;
+  --pill-bg: #eef2ff;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #dbeafe);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   APP
+========================= */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =========================
+   FLOATING BACKGROUND
+========================= */
+.floating {
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: -1;
+  animation: float 8s infinite ease-in-out;
+}
+
+.floating1 {
+  width: 220px;
+  height: 220px;
+  background: #3b82f6;
+  top: 10%;
+  left: 5%;
+}
+
+.floating2 {
+  width: 170px;
+  height: 170px;
+  background: #9333ea;
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.floating3 {
+  width: 130px;
+  height: 130px;
+  background: #06b6d4;
+  bottom: 10%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  width: 900px;
+  max-width: 96%;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(17, 24, 39, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   AVATAR
+========================= */
+.avatar {
+  flex: 0 0 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid white;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+  transition: 0.4s ease;
+}
+
+.avatar img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   INFO
+========================= */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.name-row h2 {
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.meta {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* =========================
+   DETAILS
+========================= */
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skill-title {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  background: var(--pill-bg);
+  color: var(--accent);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.pill:hover {
+  transform: translateY(-3px);
+  background: #dbeafe;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* =========================
+   CREATED BY FLOAT
+========================= */
+.footer {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  z-index: 1000;
+  animation: floatingName 3s ease-in-out infinite;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.footer span {
+  color: #ffd700;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Floating Footer Animation */
+@keyframes floatingName {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 720px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px;
+  }
+
+  .name-row {
+    flex-direction: column;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .details {
+    justify-content: center;
+  }
+
+  .footer {
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
