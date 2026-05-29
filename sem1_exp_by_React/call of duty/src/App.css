@@ -1,0 +1,343 @@
+/* src/App.css */
+
+/* --- Common Navbar & Footer Styles --- */
+nav {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Home page par nav fixed rahegi */
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+nav button {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  color: #f4c542;
+  letter-spacing: 2px;
+}
+
+nav button.active {
+  color: #f4c542;
+}
+
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+.myname {
+  color: #f4c542;
+  font-weight: bold;
+  position: relative;
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% { color: #f4c542; }
+  50% { color: white; }
+  100% { color: #ff4c4c; }
+}
+
+/* --- Home Page Styles --- */
+.hero-home {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url('https://assets.gqindia.com/photos/5d933f025d883c0008e2df1b/master/pass/call%20of%20duty.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-home h1 {
+  font-size: 70px;
+  letter-spacing: 6px;
+  color: #f4c542;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #f4c542; }
+  to { text-shadow: 0 0 30px white; }
+}
+
+.hero-home p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #f4c542;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  box-shadow: 0 0 20px #f4c542;
+}
+
+.features {
+  padding: 80px 20px;
+  text-align: center;
+  padding-bottom: 140px; /* footer spacing */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #1a1a1a;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 320px;   
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #f4c542;
+}
+
+/* --- About Page Styles --- */
+.hero-about {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('https://images.wallpapersden.com/image/download/call-of-duty-blackout_a2xobm2UmZqaraWkpJRnaWllrWZlbWU.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-about h1 {
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.section img {
+  width: 400px;
+  max-width: 90%;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.text {
+  max-width: 500px;
+  margin: 20px;
+}
+
+.text h2 {
+  color: #f4c542;
+}
+
+.timeline {
+  background: #111;
+  padding: 50px 20px;
+  text-align: center;
+  padding-bottom: 140px;
+}
+
+.year-box {
+  background: #1a1a1a;
+  margin: 20px auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.year-box:hover {
+  box-shadow: 0 0 20px #b0f442;
+  transform: scale(1.03);
+}
+
+/* --- Modes Page Styles --- */
+.body-modes {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('https://t4.ftcdn.net/jpg/05/68/60/33/360_F_568603373_myYg5WDPyja669cX4gMLRO7FdxxhbPtS.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.container-modes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 120px;
+}
+
+.mode {
+  background: #1a1a1a;
+  width: 70%;
+  max-width: 800px;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.mode img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.mode:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #f4c542;
+}
+
+/* --- Weapons Page Styles --- */
+.body-weapons {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('https://plus.unsplash.com/premium_photo-1682097238346-3f2a677ccfe6?fm=jpg&q=60&w=3000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.container-weapons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 120px;
+}
+
+.weapon {
+  background: #1a1a1a;
+  width: 60%;
+  max-width: 700px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.weapon img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.weapon:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #f4c542;
+}
+
+/* --- Characters Page Styles --- */
+.body-characters {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('https://wallpaper-house.com/data/out/8/wallpaper2you_288516.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.characters-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding-bottom: 80px;
+}
+
+.char-card {
+  background: #1a1a1a;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.char-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.char-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #f4c542;
+}
+
+.char-card button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #f4c542;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.char-card button:hover {
+  background: white;
+  box-shadow: 0 0 15px #f4c542;
+}
