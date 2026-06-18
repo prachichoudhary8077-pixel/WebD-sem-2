@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>DOM Example</title>
-
   <style>
     html, body {
       height: 100%;
       margin: 0;
     }
-
     body {
       font-family: Arial, sans-serif;
       display: flex;
@@ -17,7 +15,6 @@
       align-items: center;
       transition: 0.4s;
     }
-
     .container {
       text-align: center;
       padding: 30px;
@@ -25,16 +22,13 @@
       box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
       background-color: white;
     }
-
     h1 {
       font-size: 32px;
     }
-
     p {
       font-size: 18px;
       margin-top: 20px;
     }
-
     button {
       margin: 5px;
       padding: 10px 15px;
@@ -44,8 +38,6 @@
       cursor: pointer;
       border-radius: 5px;
     }
-
-  
    #name {
   margin-top: 25px;
   font-size: 18px;
@@ -53,15 +45,11 @@
   color: #e91e63;
   text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50;
 }
-
   </style>
 </head>
-
 <body>
-
   <div class="container">
     <h1 id="heading">WELCOME TO JAVASCRIPT</h1>
-
     <div>
       <button id="bgBtn">Change Background</button>
       <button id="resetBtn">Reset</button>
@@ -69,56 +57,43 @@
       <button id="decBtn">Decrease Font</button>
       <button id="toggleBtn">Show/Hide Paragraph</button>
     </div>
-
     <p id="para">
       “JavaScript is a powerful scripting language that enables dynamic behavior and interactivity on web pages.”
     </p>
-
-    <!-- 👇 Your Name -->
     <p id="name">✨ Created by: PRACHI CHOUDHARY ✨</p>
     <p id="name">✨ Roll No: 2503215400121 ✨</p>
     <p id="name">✨ Admission No: 2025B15410070 ✨</p>
-    
   </div>
-
   <script>
     let bgBtn = document.getElementById("bgBtn");
     let resetBtn = document.getElementById("resetBtn");
     let incBtn = document.getElementById("incBtn");
     let decBtn = document.getElementById("decBtn");
     let toggleBtn = document.getElementById("toggleBtn");
-
     let heading = document.getElementById("heading");
     let para = document.getElementById("para");
-
     bgBtn.addEventListener("click", function() {
       let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
       document.body.style.backgroundColor = randomColor;
     });
-
     resetBtn.addEventListener("click", function() {
       document.body.style.backgroundColor = "white";
       heading.style.fontSize = "32px";
       para.style.fontSize = "18px";
       para.style.display = "block";
     });
-
     incBtn.addEventListener("click", function() {
       let hSize = window.getComputedStyle(heading).fontSize;
       let pSize = window.getComputedStyle(para).fontSize;
-
       heading.style.fontSize = (parseInt(hSize) + 2) + "px";
       para.style.fontSize = (parseInt(pSize) + 2) + "px";
     });
-
     decBtn.addEventListener("click", function() {
       let hSize = window.getComputedStyle(heading).fontSize;
       let pSize = window.getComputedStyle(para).fontSize;
-
       heading.style.fontSize = (parseInt(hSize) - 2) + "px";
       para.style.fontSize = (parseInt(pSize) - 2) + "px";
     });
-
     toggleBtn.addEventListener("click", function() {
       if (para.style.display === "none") {
         para.style.display = "block";
@@ -127,6 +102,5 @@
       }
     });
   </script>
-  
 </body>
 </html>
